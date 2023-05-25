@@ -84,7 +84,7 @@
                                         <select name="doctor" class="form-select form-control" aria-label="По умолчанию выбрано значение">
                                             <option selected>Выберите услуги</option>
                                             @foreach($doctors as $doctor)
-                                                <option value="{{ $doctor->id }}">{{ $doctor->name }}</option>
+{{--                                                <option value="{{ $doctor->id }}">{{ $doctor->name }}</option>--}}
                                             @endforeach
                                         </select>
                                     </div>

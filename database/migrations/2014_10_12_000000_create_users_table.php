@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('image')->default('https://stom-assistance.kz/wp-content/uploads/2021/03/IMG_6530-1-1587x2048.jpg');
             $table->integer('type')->default(3);
             $table->string('speciality')->default('');
-            $table->text('biography')->default('');
+            $table->text('biography')->nullable(true);
             $table->rememberToken();
             $table->timestamps();
         });
