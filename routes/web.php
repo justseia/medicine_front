@@ -26,14 +26,17 @@ Route::get('/news/{news}', App\Http\Controllers\News\ShowController::class)->nam
 Route::get('/contact', App\Http\Controllers\Contact\IndexController::class)->name('contact.index');
 Route::get('/services', App\Http\Controllers\Service\IndexController::class)->name('service.index');
 Route::get('/services/{service}', App\Http\Controllers\Service\ShowController::class)->name('service.show');
+Route::get('/profile', App\Http\Controllers\Main\ProfileController::class)->name('profile.index');
+Route::post('/profile', App\Http\Controllers\Main\ProfileUpdateController::class)->name('profile.update');
+
 Route::get('/admin/patient-profile/{user}', App\Http\Controllers\Admin\Main\UserProfileController::class)->name('admin.user.profile');
-Route::post('/admin/patient-profile/{user}', App\Http\Controllers\Admin\Main\UserProfileController::class)->name('admin.user.profile.save');
+Route::post('/admin/patient-profile/{user}', App\Http\Controllers\Admin\Main\UserProfileSaveController::class)->name('admin.user.profile.save');
 
 Route::middleware('auth')->group(function () {
     Route::get('/admin/dashboard', App\Http\Controllers\Admin\Main\IndexController::class)->name('admin.index');
     Route::get('/admin/doctors', App\Http\Controllers\Admin\Main\DoctorController::class)->name('admin.doctors');
-    Route::get('/admin/users', App\Http\Controllers\Admin\Main\DoctorController::class)->name('admin.users');
-    Route::get('/admin/news', App\Http\Controllers\Admin\Main\DoctorController::class)->name('admin.news');
-    Route::get('/admin/price', App\Http\Controllers\Admin\Main\DoctorController::class)->name('admin.price');
+    Route::get('/admin/users', App\Http\Controllers\Admin\Main\UserController::class)->name('admin.users');
+    Route::get('/admin/news', App\Http\Controllers\Admin\Main\NewsController::class)->name('admin.news');
+    Route::get('/admin/price', App\Http\Controllers\Admin\Main\PriceController::class)->name('admin.price');
     Route::post('/doctor/order', App\Http\Controllers\Doctor\OrderController::class)->name('doctor.order');
 });

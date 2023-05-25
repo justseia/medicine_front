@@ -10,7 +10,7 @@ class IndexController extends Controller
 {
     public function __invoke()
     {
-        $orders = DoctorOrder::all();
+        $orders = DoctorOrder::latest('id')->get();
         return view('admin.dashboard')->with(compact('orders'));
     }
 }

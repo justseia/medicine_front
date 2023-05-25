@@ -50,18 +50,18 @@
 									@if(auth()->user()->type == 1)
 										<li>
 											<a href="{{ route('admin.index') }}" class="default-btn" style="background-color: #9aa2ff; border: 0;">
-												Профиль
+                                                Админ
 											</a>
 										</li>
 									@elseif(auth()->user()->type == 2)
 										<li>
 											<a href="{{ route('admin.index') }}" class="default-btn" style="background-color: #9aa2ff; border: 0;">
-												Профиль
+												Админ
 											</a>
 										</li>
 									@elseif(auth()->user()->type == 3)
 										<li>
-											<a href="{{ route('home.index') }}" class="default-btn" style="background-color: #9aa2ff; border: 0;">
+											<a href="{{ route('profile.index') }}" class="default-btn" style="background-color: #9aa2ff; border: 0;">
 												Профиль
 											</a>
 										</li>
