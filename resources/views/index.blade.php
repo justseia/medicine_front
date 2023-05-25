@@ -78,26 +78,41 @@
 										<input name="date" type="date" class="form-control" placeholder="12/03/2022"/>
 									</div>
 								</div>
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Услуги</label>
+                                        <select name="doctor" class="form-select form-control" aria-label="По умолчанию выбрано значение">
+                                            <option selected>Выберите врача</option>
+                                            @foreach($doctors as $doctor)
+                                                <option value="{{ $doctor->id }}">{{ $doctor->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Врач</label>
+                                        <select name="doctor" class="form-select form-control" aria-label="По умолчанию выбрано значение">
+                                            <option selected>Выберите врача</option>
+                                            @foreach($doctors as $doctor)
+                                                <option value="{{ $doctor->id }}">{{ $doctor->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
 								<div class="col-lg-6 col-sm-6">
 									<div class="form-group">
 										<label>Время</label>
 										<select name="time" class="form-select form-control" aria-label="По умолчанию выбрано значение">
-											<option value="8:00 - 10:00">8:00 - 10:00</option>
-											<option value="10:00 - 12:00">10:00 - 12:00</option>
-											<option value="12:00 - 14:00">12:00 - 14:00</option>
-											<option value="14:00 - 16:00">14:00 - 16:00</option>
-											<option value="16:00 - 18:00">16:00 - 18:00</option>
-										</select>
-									</div>
-								</div>
-								<div class="col-lg-6 col-sm-6">
-									<div class="form-group">
-										<label>Врач</label>
-										<select name="doctor" class="form-select form-control" aria-label="По умолчанию выбрано значение">
-											<option selected>Выберите врача</option>
-											@foreach($doctors as $doctor)
-												<option value="{{ $doctor->id }}">{{ $doctor->name }}</option>
-											@endforeach
+                                            <option value="8:00 - 10:00">9:00 - 10:00</option>
+											<option value="10:00 - 12:00">10:00 - 11:00</option>
+											<option value="12:00 - 14:00">11:00 - 12:00</option>
+											<option value="14:00 - 16:00">12:00 - 13:00</option>
+											<option value="16:00 - 18:00">13:00 - 14:00</option>
+											<option value="16:00 - 18:00">14:00 - 15:00</option>
+											<option value="16:00 - 18:00">15:00 - 16:00</option>
+											<option value="16:00 - 18:00">16:00 - 17:00</option>
+											<option value="16:00 - 18:00">17:00 - 18:00</option>
 										</select>
 									</div>
 								</div>
