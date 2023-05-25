@@ -26,7 +26,7 @@
 								<button class="accordion-button collapsed" type="button">ОБЩИЕ УСЛУГИ</button>
 							</h2>
 							<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-								@foreach([1,2,3,4,5,6] as $i)
+								@foreach([1,2,3,4,5,6] as $b)
 									<div class="accordion-body">
 										<div class="row">
 											<div class="col-8">Консультация первичная (осмотр, оформление документов)</div>

@@ -82,7 +82,7 @@
                                     <div class="form-group">
                                         <label>Услуги</label>
                                         <select name="doctor" class="form-select form-control" aria-label="По умолчанию выбрано значение">
-                                            <option selected>Выберите врача</option>
+                                            <option selected>Выберите услуги</option>
                                             @foreach($doctors as $doctor)
                                                 <option value="{{ $doctor->id }}">{{ $doctor->name }}</option>
                                             @endforeach
