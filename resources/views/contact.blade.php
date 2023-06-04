@@ -16,7 +16,7 @@
 		<img src="{{ asset('assets/images/page-shape-1.png') }}" class="shape page-shape-1" alt="Image"/>
 		<img src="{{ asset('assets/images/page-shape-2.png') }}" class="shape page-shape-2" alt="Image"/>
 	</div>
-	<div class="contact-info-area pt-100">
+	<div class="contact-info-area pt-100 ptb-100">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-3">
@@ -46,69 +46,69 @@
 			</div>
 		</div>
 	</div>
-	<div class="contact-area ptb-100">
-		<div class="container">
-			<div class="section-title">
-				<span class="top-title">Свяжитесь с нами</span>
-				<h2>Свяжитесь с нами</h2>
-			</div>
-			<div class="contact-form">
-				<form id="contactForm">
-					<div class="row">
-						<div class="col-lg-6 col-md-6">
-							<div class="form-group">
-								<label>ФИО</label>
-								<input type="text" name="name" id="name" class="form-control" required data-error="Введите ваше имя" placeholder="Ереке"/>
-								<div class="help-block with-errors"></div>
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-6">
-							<div class="form-group">
-								<label>Электронная почта</label>
-								<input type="email" name="email" id="email" class="form-control" required data-error="Введите вашу электронную почту" placeholder="ereke@gmail.com"/>
-								<div class="help-block with-errors"></div>
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-6">
-							<div class="form-group">
-								<label>Телефон</label>
-								<input type="text" name="phone_number" id="phone_number" required data-error="Введите ваш номер" class="form-control" placeholder="+7(747) 409 2621"/>
-								<div class="help-block with-errors"></div>
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-6">
-							<div class="form-group">
-								<label>Тема сообщения</label>
-								<input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Введите тему сообщения" placeholder="Тема сообщения"/>
-								<div class="help-block with-errors"></div>
-							</div>
-						</div>
-						<div class="col-lg-12">
-							<div class="form-group">
-								<label>Ваше сообщение</label>
-								<textarea name="message" class="form-control" id="message" cols="30" rows="6" required data-error="Напишите ваше сообщение" placeholder="Напишите ваше сообщение"></textarea>
-								<div class="help-block with-errors"></div>
-							</div>
-						</div>
-						<div class="col-12">
-							<div class="form-check">
-								<div class="form-group">
-									<div class="form-check">
-										<input name="gridCheck" value="Я согласен с условиями и политикой конфиденциальности." class="form-check-input" type="checkbox" id="gridCheck" required/>
-										<label class="form-check-label" for="gridCheck"> Я согласен с <a href="{{ route('login') }}">условиями</a> и <a href="{{ route('login') }}">политикой конфиденциальности</a> </label>
-										<div class="help-block with-errors gridCheck-error"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="text-center col-lg-12 col-md-12">
-							<button type="submit" class="default-btn">Отправить сообщение</button>
-							<div id="msgSubmit" class="hidden text-center h3"></div>
-							<div class="clearfix"></div>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
+{{--	<div class="contact-area ptb-100">--}}
+{{--		<div class="container">--}}
+{{--			<div class="section-title">--}}
+{{--				<span class="top-title">Свяжитесь с нами</span>--}}
+{{--				<h2>Свяжитесь с нами</h2>--}}
+{{--			</div>--}}
+{{--			<div class="contact-form">--}}
+{{--				<form id="contactForm">--}}
+{{--					<div class="row">--}}
+{{--						<div class="col-lg-6 col-md-6">--}}
+{{--							<div class="form-group">--}}
+{{--								<label>ФИО</label>--}}
+{{--								<input type="text" name="name" id="name" class="form-control" required data-error="Введите ваше имя" placeholder="Ереке"/>--}}
+{{--								<div class="help-block with-errors"></div>--}}
+{{--							</div>--}}
+{{--						</div>--}}
+{{--						<div class="col-lg-6 col-md-6">--}}
+{{--							<div class="form-group">--}}
+{{--								<label>Электронная почта</label>--}}
+{{--								<input type="email" name="email" id="email" class="form-control" required data-error="Введите вашу электронную почту" placeholder="ereke@gmail.com"/>--}}
+{{--								<div class="help-block with-errors"></div>--}}
+{{--							</div>--}}
+{{--						</div>--}}
+{{--						<div class="col-lg-6 col-md-6">--}}
+{{--							<div class="form-group">--}}
+{{--								<label>Телефон</label>--}}
+{{--								<input type="text" name="phone_number" id="phone_number" required data-error="Введите ваш номер" class="form-control" placeholder="+7(747) 409 2621"/>--}}
+{{--								<div class="help-block with-errors"></div>--}}
+{{--							</div>--}}
+{{--						</div>--}}
+{{--						<div class="col-lg-6 col-md-6">--}}
+{{--							<div class="form-group">--}}
+{{--								<label>Тема сообщения</label>--}}
+{{--								<input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Введите тему сообщения" placeholder="Тема сообщения"/>--}}
+{{--								<div class="help-block with-errors"></div>--}}
+{{--							</div>--}}
+{{--						</div>--}}
+{{--						<div class="col-lg-12">--}}
+{{--							<div class="form-group">--}}
+{{--								<label>Ваше сообщение</label>--}}
+{{--								<textarea name="message" class="form-control" id="message" cols="30" rows="6" required data-error="Напишите ваше сообщение" placeholder="Напишите ваше сообщение"></textarea>--}}
+{{--								<div class="help-block with-errors"></div>--}}
+{{--							</div>--}}
+{{--						</div>--}}
+{{--						<div class="col-12">--}}
+{{--							<div class="form-check">--}}
+{{--								<div class="form-group">--}}
+{{--									<div class="form-check">--}}
+{{--										<input name="gridCheck" value="Я согласен с условиями и политикой конфиденциальности." class="form-check-input" type="checkbox" id="gridCheck" required/>--}}
+{{--										<label class="form-check-label" for="gridCheck"> Я согласен с <a href="{{ route('login') }}">условиями</a> и <a href="{{ route('login') }}">политикой конфиденциальности</a> </label>--}}
+{{--										<div class="help-block with-errors gridCheck-error"></div>--}}
+{{--									</div>--}}
+{{--								</div>--}}
+{{--							</div>--}}
+{{--						</div>--}}
+{{--						<div class="text-center col-lg-12 col-md-12">--}}
+{{--							<button type="submit" class="default-btn">Отправить сообщение</button>--}}
+{{--							<div id="msgSubmit" class="hidden text-center h3"></div>--}}
+{{--							<div class="clearfix"></div>--}}
+{{--						</div>--}}
+{{--					</div>--}}
+{{--				</form>--}}
+{{--			</div>--}}
+{{--		</div>--}}
+{{--	</div>--}}
 @endsection

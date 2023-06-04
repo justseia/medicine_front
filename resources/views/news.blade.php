@@ -37,7 +37,7 @@
                                     </li>
                                 </ul>
                                 <h3>
-                                    <a href="{{ route('news.show', $news_item) }}">{{ $news_item->title }}</a>
+                                    <a href="{{ route('news.show', $news_item) }}" style="display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">{{ $news_item->title }}</a>
                                 </h3>
                             </div>
                         </div>

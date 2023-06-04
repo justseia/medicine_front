@@ -1,12 +1,10 @@
 <header class="main-header">
     <div class="d-flex align-items-center logo-box justify-content-start">
-        <!-- Logo -->
         <a href="{{ route('admin.index') }}" class="logo">
-            Ereke Center
+            Dental Clinic
         </a>
     </div>
     <nav class="navbar navbar-static-top">
-        <!-- Sidebar toggle button-->
         <div class="app-menu">
             <ul class="header-megamenu nav">
                 <li class="btn-group nav-item">
@@ -17,10 +15,8 @@
                 </li>
             </ul>
         </div>
-
         <div class="navbar-custom-menu r-side">
             <ul class="nav navbar-nav">
-                <!-- User Account-->
                 <li class="dropdown user user-menu">
                     <div class="w-auto p-0 bg-transparent waves-effect waves-light dropdown-toggle l-h-12 no-shadow"
                          data-bs-toggle="dropdown" title="User">
@@ -54,7 +50,6 @@
         </div>
     </nav>
 </header>
-
 <aside class="main-sidebar">
     <section class="sidebar position-relative">
         <div class="multinav">
@@ -92,12 +87,12 @@
                                 <span>News</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="{{ route('admin.price') }}">
-                                <span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
-                                <span>Price</span>
-                            </a>
-                        </li>
+{{--                        <li>--}}
+{{--                            <a href="{{ route('admin.price') }}">--}}
+{{--                                <span class="path1"></span><span class="path2"></span><span class="path3"></span></i>--}}
+{{--                                <span>Price</span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
                     @endif
                 </ul>
             </div>

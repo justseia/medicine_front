@@ -18,6 +18,9 @@
 							<li class="nav-item">
 								<a href="{{ route('home.index') }}" class="nav-link">Главная</a>
 							</li>
+                            <li class="nav-item">
+                                <a href="{{ route('appointment.index') }}" class="nav-link">Запись</a>
+                            </li>
 							<li class="nav-item">
 								<a href="{{ route('about.index') }}" class="nav-link">О нас</a>
 							</li>
@@ -37,7 +40,6 @@
 								<a href="{{ route('contact.index') }}" class="nav-link">Контакты</a>
 							</li>
 						</ul>
-
 						<div class="others-options">
 							<ul>
 								<li>
@@ -79,7 +81,6 @@
 				</nav>
 			</div>
 		</div>
-
 		<div class="others-option-for-responsive">
 			<div class="container">
 				<div class="dot-menu">
@@ -89,7 +90,6 @@
 						<div class="circle circle-three"></div>
 					</div>
 				</div>
-
 				<div class="container">
 					<div class="option-inner">
 						<div class="others-options justify-content-center d-flex align-items-center">

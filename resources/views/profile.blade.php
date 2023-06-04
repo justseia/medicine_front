@@ -1,170 +1,72 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="page-title-area">
+        <div class="container">
+            <div class="page-title-content">
+                <h2>Профиль</h2>
+                <ul>
+                    <li>
+                        <a href="{{ route('home.index') }}"> Главная </a>
+                    </li>
+                    <li class="active">Профиль</li>
+                </ul>
+            </div>
+        </div>
+        <img src="{{ asset('assets/images/page-shape-1.png') }}" class="shape page-shape-1" alt="Изображение"/>
+        <img src="{{ asset('assets/images/page-shape-2.png') }}" class="shape page-shape-2" alt="Изображение"/>
+    </div>
     <div class="container" style="padding-top: 100px;">
         <section class="content">
             <div class="row">
                 <div class="col-12 col-lg-7 col-xl-8">
                     <div class="nav-tabs-custom">
                         <ul class="nav nav-tabs">
-                            <li><a class="active" href="#activity" data-bs-toggle="tab">Record</a></li>
-                            <li><a href="#settings" data-bs-toggle="tab">Settings</a></li>
+                            <li><a class="active" href="#times" data-bs-toggle="tab">Время записи</a></li>
+                            <li><a href="#activity" data-bs-toggle="tab">Записи</a></li>
+                            <li><a href="#settings" data-bs-toggle="tab">Профиль данные</a></li>
                         </ul>
                         <div class="tab-content">
-                            <div class="tab-pane" id="usertimeline">
-                                <div class="publisher publisher-multi bg-white b-1 mb-30">
-                                    <textarea class="publisher-input auto-expand" rows="4" placeholder="Write something"></textarea>
-                                    <div class="flexbox">
-                                        <div class="gap-items">
-                                        <span class="publisher-btn file-group">
-                                            <i class="fa fa-image file-browser"></i>
-                                            <input type="file"/>
-                                        </span>
-                                            <a class="publisher-btn" href="#"><i class="fa fa-map-marker"></i></a>
-                                            <a class="publisher-btn" href="#"><i class="fa fa-smile-o"></i></a>
-                                        </div>
-                                        <button class="btn btn-sm btn-bold btn-primary">Post</button>
-                                    </div>
-                                </div>
-                                <div class="box b-1 no-shadow">
-                                    <div class="media bb-1 border-fade">
-                                        <img class="avatar avatar-lg" src="{{asset('avatar/3.jpg')}}" alt="..."/>
-                                        <div class="media-body">
-                                            <p>
-                                                <strong>Denial Webar</strong>
-                                                <time class="float-end text-fade" datetime="2017">24 min ago</time>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="box-body bb-1 border-fade">
-                                        <p class="lead">Authoritatively syndicate goal-oriented leadership skills for clicks-and-mortar outsourcing. Synergistically reconceptualize enabled catalysts for change.</p>
-                                    </div>
-                                    <div class="media-list media-list-divided bg-lighter">
-                                        <div class="media">
-                                            <a class="avatar" href="#">
-                                                <img src="avatar/6.jpg" alt="..."/>
-                                            </a>
-                                            <div class="media-body">
-                                                <p>
-                                                    <a href="#"><strong>Rock Tele</strong></a>
-                                                    <time class="float-end text-fade" datetime="2017-07-14 20:00">Just now</time>
-                                                </p>
-                                                <p>Uniquely enhance world-class channels with just in time schemas.</p>
-
-                                                <div class="media px-0 mt-20">
-                                                    <a class="avatar" href="#">
-                                                        <img src="avatar/8.jpg" alt="..."/>
-                                                    </a>
-                                                    <div class="media-body">
-                                                        <p>
-                                                            <a href="#"><strong>Brock Lensar</strong></a>
-                                                            <time class="float-end text-fade" datetime="2017-07-14 20:00">26 mins ago</time>
-                                                        </p>
-                                                        <p>Thank you for your nice comment.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="media">
-                                            <a class="avatar" href="#">
-                                                <img src="avatar/9.jpg" alt="..."/>
-                                            </a>
-                                            <div class="media-body">
-                                                <p>
-                                                    <a href="#"><strong>Tony Stark</strong></a>
-                                                    <time class="float-end text-fade" datetime="2017-07-14 20:00">2 hours ago</time>
-                                                </p>
-                                                <p>Continually drive user friendly solutions through performance based infomediaries.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <form class="publisher bt-1 border-fade">
-                                        <img class="avatar avatar-sm" src="avatar/4.jpg" alt="..."/>
-                                        <input class="publisher-input" type="text" placeholder="Add Your Comment"/>
-                                        <a class="publisher-btn" href="#"><i class="fa fa-smile-o"></i></a>
-                                        <span class="publisher-btn file-group">
-                                        <i class="fa fa-camera file-browser"></i>
-                                        <input type="file"/>
-                                    </span>
-                                    </form>
-                                </div>
-                                <div class="box p-15">
-                                    <div class="timeline timeline-single-column timeline-single-full-column">
-                                    <span class="timeline-label">
-                                        <span class="badge badge-info badge-pill">Images</span>
-                                    </span>
-                                        <div class="timeline-item">
-                                            <div class="timeline-point timeline-point-success">
-                                                <i class="fa fa-image"></i>
-                                            </div>
-                                            <div class="timeline-event">
-                                                <div class="timeline-heading">
-                                                    <h4 class="timeline-title"><a href="#">Rakesh Kumar</a><small> uploaded new photos</small></h4>
-                                                </div>
-                                                <div class="timeline-body">
-                                                    <img src="150x100.png" alt="..." class="m-10"/>
-                                                    <img src="150x100.png" alt="..." class="m-10"/>
-                                                    <img src="150x100.png" alt="..." class="m-10"/>
-                                                    <img src="150x100.png" alt="..." class="m-10"/>
-                                                </div>
-                                                <div class="timeline-footer">
-                                                    <p class="text-end"><i class="fa fa-clock-o"></i> 8 days ago</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="timeline-item">
-                                            <div class="timeline-point timeline-point-info">
-                                                <i class="ion ion-chatbubble-working"></i>
-                                            </div>
-                                            <div class="timeline-event">
-                                                <div class="timeline-heading">
-                                                    <h4 class="timeline-title"><a href="#">Jone Doe</a><small> commented on your post</small></h4>
-                                                </div>
-                                                <div class="timeline-body">
-                                                    <p>
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus numquam facilis enim eaque, tenetur nam id qui vel velit similique nihil iure molestias aliquam, voluptatem totam
-                                                        quaerat, magni commodi quisquam.
-                                                    </p>
-                                                </div>
-                                                <div class="timeline-footer">
-                                                    <a class="btn btn-success btn-sm" href="#">View comment</a>
-                                                    <p class="pull-right"><i class="fa fa-clock-o"></i> 8 days ago</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="timeline-item">
-                                            <div class="timeline-point timeline-point-danger">
-                                                <i class="ion ion-ios-videocam"></i>
-                                            </div>
-                                            <div class="timeline-event">
-                                                <div class="timeline-heading">
-                                                    <h4 class="timeline-title"><a href="#">Jone Doe</a><small> shared a video</small></h4>
-                                                </div>
-                                                <div class="timeline-body">
-                                                    <div class="ratio ratio-16x9">
-                                                        <iframe src="https://www.youtube.com/embed/k85mRPqvMbE"></iframe>
-                                                    </div>
-                                                </div>
-                                                <div class="timeline-footer">
-                                                    <a class="btn btn-success btn-sm" href="#">View comment</a>
-                                                    <p class="pull-right"><i class="fa fa-clock-o"></i> 8 days ago</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <span class="timeline-label">
-                                        <button class="btn btn-danger"><i class="fa fa-clock-o"></i></button>
-                                    </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="active tab-pane" id="activity">
-                                @foreach($doctor_orders as $doctor_order)
+                            <div class="active tab-pane" id="times">
+                                @forelse($my_orders as $my_order)
                                     <div class="box no-shadow">
                                         <div class="post clearfix">
                                             <div class="user-block" style="padding-left: 50px; padding-top: 20px;">
-                                                <img class="img-bordered-sm rounded-circle" src="{{ \App\Models\User::where('id', $doctor_order->doctor_id)->first()->image }}" alt="user image"/>
+                                                <img class="img-bordered-sm rounded-circle" src="{{ \App\Models\User::where('id', $my_order->doctor_id)->first()->image }}" alt="изображение пользователя"/>
+                                                <div style="display: flex;justify-content: space-between;">
+                                                    <div style="display: flex;flex-direction: column;">
+                                                        <div class="username" style="display: flex;">
+                                                            <a href="{{ route('doctor.show', $my_order->doctor_id) }}">{{ \App\Models\User::where('id', $my_order->doctor_id)->first()->name }}</a>
+                                                        </div>
+                                                        <div class="description" style="display: flex;">{{ $my_order->day->isoFormat('LL') }}</div>
+                                                    </div>
+                                                    <div style="display:flex;align-items: center;padding-right: 30px;">
+                                                        <form action="{{ route('profile.delete', $my_order->id) }}" method="post">
+                                                            @method('delete')
+                                                            @csrf
+                                                            <button type="submit" style="background-color: #00000000;color: red;">Удалить</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @empty
+                                    <div>У вас нет записей</div>
+                                @endforelse
+                            </div>
+                            <div class="tab-pane" id="activity">
+                                <form action="{{ route('profile.filter') }}" method="post" class="form-group">
+                                    @csrf
+                                    <input name="start" type="date" style="width: 200px;border: 1px solid #000000;border-radius: 5px;padding: 10px 15px;background-color: #fff;">
+                                    <input name="end" type="date" style="width: 200px;border: 1px solid #000000;border-radius: 5px;padding: 10px 15px;background-color: #fff;"/>
+                                    <button type="submit" style="background-color: #9aa2ff;width: 200px;padding: 10px 0px;border-radius: 5px;color: #fff;">Фильтр</button>
+                                </form>
+                                @forelse($doctor_orders as $doctor_order)
+                                    <div class="box no-shadow">
+                                        <div class="post clearfix">
+                                            <div class="user-block" style="padding-left: 50px; padding-top: 20px;">
+                                                <img class="img-bordered-sm rounded-circle" src="{{ \App\Models\User::where('id', $doctor_order->doctor_id)->first()->image }}" alt="изображение пользователя"/>
                                                 <span class="username">
                                             <a href="#">{{ \App\Models\User::where('id', $doctor_order->doctor_id)->first()->name }}</a>
                                         </span>
@@ -177,15 +79,16 @@
                                             </div>
                                         </div>
                                     </div>
-                                @endforeach
+                                @empty
+                                    <div>У вас нет записей</div>
+                                @endforelse
                             </div>
-
                             <div class="tab-pane" id="settings">
                                 <div class="box no-shadow">
-                                    <form action="{{ route('profile.update') }}" method="post" class="form-horizontal form-element col-12" style="padding-top: 20px; padding-right: 20px;">
+                                    <form action="{{ route('profile.update') }}" method="post" class="form-horizontal form-element col-12" style="padding-top: 20px; padding-right: 20px;" enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-group row">
-                                            <label for="inputName" class="col-sm-2 form-label" style="display: grid; place-content: center;">Name</label>
+                                            <label for="inputName" class="col-sm-2 form-label" style="display: grid; place-content: center;">Имя</label>
                                             <div class="col-sm-10">
                                                 <input value="{{ auth()->user()->name }}" name="name" type="text" class="form-control" id="inputName" placeholder="" style="padding: 10px; height: 40px; border-radius: 10px; border: 1px solid;"/>
                                             </div>
@@ -197,20 +100,38 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="inputPhone" class="col-sm-2 form-label" style="display: grid; place-content: center;">Phone</label>
+                                            <label for="inputPhone" class="col-sm-2 form-label" style="display: grid; place-content: center;">Телефон</label>
                                             <div class="col-sm-10">
                                                 <input value="{{ auth()->user()->phone }}" name="phone" type="text" class="form-control" id="inputPhone" placeholder="" style="padding: 10px; height: 40px; border-radius: 10px; border: 1px solid;"/>
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="inputExperience" class="col-sm-2 form-label" style="display: grid; place-content: center;">Biography</label>
+                                            <label for="inputPhone" class="col-sm-2 form-label" style="display: grid; place-content: center;">Вес</label>
+                                            <div class="col-sm-10">
+                                                <input value="{{ auth()->user()->weight }}" name="weight" type="number" class="form-control" id="inputPhone" placeholder="" style="padding: 10px; height: 40px; border-radius: 10px; border: 1px solid;"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputPhone" class="col-sm-2 form-label" style="display: grid; place-content: center;">Рост</label>
+                                            <div class="col-sm-10">
+                                                <input value="{{ auth()->user()->height }}" name="height" type="number" class="form-control" id="inputPhone" placeholder="" style="padding: 10px; height: 40px; border-radius: 10px; border: 1px solid;"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputExperience" class="col-sm-2 form-label" style="display: grid; place-content: center;">Болезни</label>
                                             <div class="col-sm-10">
                                                 <textarea name="biography" class="form-control" rows="5" id="inputExperience" placeholder="" style="padding: 10px; border-radius: 10px; border: 1px solid;">{{ auth()->user()->biography }}</textarea>
                                             </div>
                                         </div>
                                         <div class="form-group row">
+                                            <label for="inputPhone" class="col-sm-2 form-label" style="display: grid; place-content: center;">Фото</label>
+                                            <div class="col-sm-10">
+                                                <input id="imageFile" name="image" type="file" class="form-control" id="inputPhone" placeholder="" style="padding: 10px; height: 40px; border-radius: 10px; border: 1px solid;"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
                                             <div class="ms-auto col-sm-10">
-                                                <button type="submit" class="btn btn-success">Save</button>
+                                                <button type="submit" style="background-color: #9aa2ff;width: 200px;padding: 10px 0px;border-radius: 5px;color: #fff;">Сохранить</button>
                                             </div>
                                         </div>
                                     </form>
@@ -221,15 +142,27 @@
                 </div>
                 <div class="col-12 col-lg-5 col-xl-4">
                     <div class="box box-widget widget-user">
-                        <div class="widget-user-header bg-img bbsr-0 bber-0" style="background: url('{{asset('gallery/full/10.jpg')}}') center center;height: 200px" data-overlay="5">
-                            <h3 class="widget-user-username text-white">{{ auth()->user()->name }}</h3>
-                        </div>
-                        <div class="widget-user-image">
-                            <img class="rounded-circle" src="{{ auth()->user()->image }}" alt="User Avatar" style="height: 90px;"/>
-                        </div>
+                        <img id="prevImage" src="{{ auth()->user()->image }}" class="widget-user-header bg-img bbsr-0 bber-0" style="height: 400px;object-position:top;object-fit:cover;padding:0px"/>
                     </div>
                 </div>
             </div>
         </section>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function imageFile(input) {
+            if (input.files && input.files[0]) {
+                let reader = new FileReader();
+                reader.onloadend = function (e) {
+                    $('#prevImage').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#imageFile").change(function () {
+            imageFile(this);
+        });
+    </script>
 @endsection

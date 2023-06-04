@@ -10,7 +10,10 @@ class IndexController extends Controller
 {
     public function __invoke()
     {
-        $orders = DoctorOrder::latest('id')->get();
+        if (auth()->user()->type == 1) {
+            $orders = DoctorOrder::latest('id')->get();
+        }
+        $orders = DoctorOrder::where('doctor_id', auth()->user()->id)->get();
         return view('admin.dashboard')->with(compact('orders'));
     }
 }

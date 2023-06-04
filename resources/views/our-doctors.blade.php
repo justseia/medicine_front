@@ -9,7 +9,6 @@
                     <li>
                         <a href="{{ route('home.index') }}"> Главная </a>
                     </li>
-
                     <li class="active">Наши доктора</li>
                 </ul>
             </div>
@@ -27,13 +26,13 @@
 
             <div class="row">
                 @foreach($doctors as $doctor)
-                    <div class="col-lg-3 col-sm-6">
+                    <a href="{{ route('doctor.show', $doctor) }}" class="col-lg-3 col-sm-6">
                         <div class="single-doctor wow fadeInUp delay-0-2s">
                             <img src="{{ $doctor->image }}" alt="Изображение"/>
                             <h3>{{ $doctor->name }}</h3>
                             <span>{{ $doctor->speciality }}</span>
                         </div>
-                    </div>
+                    </a>
                 @endforeach
 			</div>
 		</div>

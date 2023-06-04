@@ -14,31 +14,28 @@
                             <div class="d-inline-block align-items-center">
                                 <nav>
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item">
-                                            <a href="#"><i class="mdi mdi-home-outline"></i></a>
+                                        <li class="breadcrumb-item active" aria-current="page">
+                                            <a href="{{ route('admin.doctors.create') }}">Doctors Add</a>
                                         </li>
-                                        <li class="breadcrumb-item active" aria-current="page">Doctors</li>
                                     </ol>
                                 </nav>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Main content -->
                 <section class="content">
                     <div class="row">
                         @foreach($doctors as $doctor)
-                            <div class="col-12 col-lg-4">
+                            <div class="col-3">
                                 <div class="box ribbon-box">
                                     <div class="p-0 box-header no-border">
-                                        <a href="#">
+                                        <a href="{{ route('admin.doctors.edit', $doctor) }}">
                                             <img class="img-fluid" src="{{ $doctor->image }}" alt=""/>
                                         </a>
                                     </div>
                                     <div class="box-body">
                                         <div class="text-center">
-                                            <h3 class="my-10"><a href="#">{{ $doctor->name }}</a></h3>
+                                            <h3 class="my-10">{{ $doctor->name }}</h3>
                                             <h6 class="mt-0 mb-10 user-info text-fade">{{ $doctor->speciality }}</h6>
                                         </div>
                                     </div>
@@ -49,8 +46,6 @@
                 </section>
             </div>
         </div>
-
         <div class="control-sidebar-bg"></div>
     </div>
-
 @endsection

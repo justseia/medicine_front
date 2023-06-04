@@ -28,11 +28,9 @@
 					</ul>
 				</div>
 			</div>
-
 			<div class="col-lg-3 col-sm-6">
 				<div class="single-footer-widget wow fadeInUp delay-0-4s">
 					<h3>Информация о контактах</h3>
-
 					<ul class="contact-info">
 						<li>
 							<span>Адрес:</span>
@@ -49,11 +47,9 @@
 					</ul>
 				</div>
 			</div>
-
 			<div class="col-lg-3 col-sm-6">
 				<div class="single-footer-widget wow fadeInUp delay-0-6s">
 					<h3>Быстрые ссылки</h3>
-
 					<ul class="help-link">
 						<li>
 							<a href="#">О нас</a>

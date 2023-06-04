@@ -11,7 +11,10 @@ class DoctorOrder extends Model
 
     protected $guarded = [];
 
-    public function user() {
+    protected $casts = ['day' => 'datetime'];
+
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 }

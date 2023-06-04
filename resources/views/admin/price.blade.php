@@ -24,8 +24,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Main content -->
                 <section class="content">
                     <div class="row">
                         @foreach($prices as $price)
@@ -49,8 +47,6 @@
                 </section>
             </div>
         </div>
-
         <div class="control-sidebar-bg"></div>
     </div>
-
 @endsection

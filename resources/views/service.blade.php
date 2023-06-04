@@ -11,12 +11,10 @@
 							Главная
 						</a>
 					</li>
-
 					<li class="active">Услуги</li>
 				</ul>
 			</div>
 		</div>
-
 		<img src="{{ asset('assets/images/page-shape-1.png') }}" class="shape page-shape-1" alt="Изображение">
 		<img src="{{ asset('assets/images/page-shape-2.png') }}" class="shape page-shape-2" alt="Изображение">
 	</div>
@@ -42,7 +40,6 @@
 						</a>
 					</div>
 				</div>
-
 				<div class="col-lg-4 col-md-6">
 					<div class="single-services-box wow fadeInUp delay-0-4s">
 						<i class="shape flaticon-examination"></i>
@@ -58,7 +55,6 @@
 						</a>
 					</div>
 				</div>
-
 				<div class="col-lg-4 col-md-6">
 					<div class="single-services-box wow fadeInUp delay-0-6s">
 						<i class="shape flaticon-consult"></i>
@@ -89,7 +85,6 @@
 						</a>
 					</div>
 				</div>
-
 				<div class="col-lg-4 col-md-6">
 					<div class="single-services-box wow fadeInUp delay-0-1s">
 						<i class="shape flaticon-drug"></i>
@@ -105,7 +100,6 @@
 						</a>
 					</div>
 				</div>
-
 				<div class="col-lg-4 col-md-6">
 					<div class="single-services-box wow fadeInUp delay-0-1s">
 						<i class="shape flaticon-mental-health"></i>

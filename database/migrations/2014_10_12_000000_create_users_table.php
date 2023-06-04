@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -18,10 +17,14 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('phone')->default('');
             $table->string('password');
-            $table->string('image')->default('https://stom-assistance.kz/wp-content/uploads/2021/03/IMG_6530-1-1587x2048.jpg');
+            $table->string('image')->default('https://api.dicebear.com/6.x/fun-emoji/svg');
             $table->integer('type')->default(3);
             $table->string('speciality')->default('');
+            $table->integer('work_experience')->default(0);
             $table->text('biography')->nullable(true);
+            $table->integer('weight')->nullable(true);
+            $table->integer('height')->nullable(true);
+            $table->integer('cashback')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

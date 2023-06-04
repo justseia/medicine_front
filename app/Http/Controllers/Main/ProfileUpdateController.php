@@ -16,6 +16,8 @@ class ProfileUpdateController extends Controller
             'name' => $request->name,
             'phone' => $request->phone,
             'email' => $request->email,
+            'weight' => $request->weight,
+            'height' => $request->height,
             'biography' => $request->biography,
         ]);
         return redirect()->route('profile.index');
