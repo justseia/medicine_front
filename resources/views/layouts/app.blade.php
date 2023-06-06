@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"/>
     <link rel="stylesheet" href="{{ asset('assets/css/dark-mode.css') }}"/>
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}"/>
-    @livewireStyles
+    @livewireStyles ()
 </head>
 <body>
 
@@ -30,7 +30,7 @@
 
 <x-footer/>
 
-@livewireScripts
+@livewireScripts ()
 <script src="{{ asset('js/vendors.min.js') }}"></script>
 <script src="{{ asset('js/pages/chat-popup.js') }}"></script>
 <script src="{{ asset('icons/feather-icons/feather.min.js') }}"></script>

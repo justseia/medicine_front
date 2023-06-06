@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <livewire:appointment-doctor/>
+    <div>
+        <livewire:appointment-doctor/>
+    </div>
 @endsection
