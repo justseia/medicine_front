@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\Main;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class DoctorStoreController extends Controller
 {
@@ -23,6 +24,7 @@ class DoctorStoreController extends Controller
             'work_experience' => $request->work_experience,
             'biography' => $request->biography,
             'image' => $image_name,
+            'password' => Hash::make('asdasdasd'),
         ]);
         return view('admin.doctor-add');
     }
