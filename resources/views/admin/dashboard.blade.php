@@ -34,7 +34,7 @@
                                             @foreach($orders as $order)
                                                 <tr class="hover-primary">
                                                     <td>{{ $order->id }}</td>
-                                                    <td>{{ $order->time }}</td>
+                                                    <td>{{ $order->time->created_at->isoFormat('LL') . ' ' . $order->time->time }}</td>
                                                     <td>{{ \App\Models\User::where('id', $order->user_id)->first()->name }}</td>
                                                     <td>{{ \App\Models\User::where('id', $order->doctor_id)->first()->name }}</td>
                                                     <td>

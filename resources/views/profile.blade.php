@@ -38,7 +38,7 @@
                                                         <div class="username" style="display: flex;">
                                                             <a href="{{ route('doctor.show', $my_order->doctor_id) }}">{{ \App\Models\User::where('id', $my_order->doctor_id)->first()->name }}</a>
                                                         </div>
-                                                        <div class="description" style="display: flex;">{{ $my_order->day->isoFormat('LL') . ' ' . $my_order->time_id->time  }}</div>
+                                                        <div class="description" style="display: flex;">{{ $my_order->day->isoFormat('LL') . ' ' . $my_order->time->time  }}</div>
                                                     </div>
                                                     <div style="display:flex;align-items: center;padding-right: 30px;">
                                                         <form action="{{ route('profile.delete', $my_order->id) }}" method="post">

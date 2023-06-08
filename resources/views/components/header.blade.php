@@ -6,6 +6,99 @@
                     <div class="logo">
                         <a href="{{ route('home.index') }}" class="font-bold text-[22px]">Dental Clinic</a>
                     </div>
+                    <div id="mobile-menu" class="show_menu_mobile">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('home.index') }}">Главная</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('appointment.index') }}">Запись</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('about.index') }}">О нас</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('doctor.index') }}">Наши доктора</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('price.index') }}">Цены</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('service.index') }}">Сервисы</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('news.index') }}">Новости</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('contact.index') }}">Контакты</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="tel:+77474092621">
+                                    <i class="ri-phone-line"></i>
+                                    <span>+7(747) 409 2621</span>
+                                </a>
+                            </li>
+                            @if(auth()->user())
+                                @if(auth()->user()->type == 1)
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('admin.index') }}">
+                                            <i class="ri-account-circle-line"></i>
+                                            Админ
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                            <i class="ri-logout-box-r-line"></i>
+                                            Выйти
+                                        </a>
+                                        <form id="logout-form" method="post" action="{{ route('logout') }}">
+                                            @csrf
+                                        </form>
+                                    </li>
+                                @elseif(auth()->user()->type == 2)
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('admin.index') }}">
+                                            <i class="ri-account-circle-line"></i>
+                                            Доктор
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                            <i class="ri-logout-box-r-line"></i>
+                                            Выйти
+                                        </a>
+                                        <form id="logout-form" method="post" action="{{ route('logout') }}">
+                                            @csrf
+                                        </form>
+                                    </li>
+                                @elseif(auth()->user()->type == 3)
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('profile.index') }}">
+                                            <i class="ri-account-circle-line"></i>
+                                            Профиль
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                            <i class="ri-logout-box-r-line"></i>
+                                            Выйти
+                                        </a>
+                                        <form id="logout-form" method="post" action="{{ route('logout') }}">
+                                            @csrf
+                                        </form>
+                                    </li>
+                                @endif
+                            @else
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">
+                                        <span>Войти</span>
+                                    </a>
+                                </li>
+                            @endif
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -113,41 +206,58 @@
         </div>
         <div class="others-option-for-responsive">
             <div class="container">
-                <div class="dot-menu">
+                <div id="menu-button" class="dot-menu" style="top:-28px;right:10px;">
                     <div class="inner">
                         <div class="circle circle-one"></div>
                         <div class="circle circle-two"></div>
                         <div class="circle circle-three"></div>
                     </div>
                 </div>
-                <div class="container">
-                    <div class="option-inner">
-                        <div class="others-options justify-content-center d-flex align-items-center">
-                            <ul>
-                                <li>
-                                    <form class="search-form">
-                                        <input type="text" class="form-control" placeholder="Поиск..."/>
-                                        <button type="submit" class="src-btn">
-                                            <i class="ri-search-line"></i>
-                                        </button>
-                                    </form>
-                                </li>
-                                <li>
-                                    <a href="tel:+77474092621" class="call-us">
-                                        <i class="ri-phone-line"></i>
-                                        <span>+7(747) 409 2621</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('login') }}" class="default-btn">
-                                        <span>Войти</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 </div>
+
+<style>
+    .show_menu_mobile {
+        display: none;
+    }
+
+    .full-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(236, 236, 236, 0.97);
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        overflow-y: scroll;
+    }
+</style>
+
+<script>
+    var menuButton = document.getElementById('menu-button');
+    var mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenu.addEventListener('click', function () {
+        if (mobileMenu.classList.contains('full-screen')) {
+            mobileMenu.classList.remove('full-screen');
+        } else {
+            mobileMenu.classList.add('full-screen');
+        }
+    });
+
+    menuButton.addEventListener('click', function () {
+        if (mobileMenu.classList.contains('full-screen')) {
+            mobileMenu.classList.remove('full-screen');
+        } else {
+            mobileMenu.classList.add('full-screen');
+        }
+    });
+</script>
+
