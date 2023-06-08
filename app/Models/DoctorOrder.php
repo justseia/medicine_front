@@ -13,7 +13,15 @@ class DoctorOrder extends Model
 
     protected $casts = ['day' => 'datetime'];
 
-    public function user()
+
+    public
+    function time()
+    {
+        return $this->belongsTo(Time::class);
+    }
+
+    public
+    function user()
     {
         return $this->belongsTo(User::class);
     }

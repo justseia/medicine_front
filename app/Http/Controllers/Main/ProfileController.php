@@ -13,7 +13,7 @@ class ProfileController extends Controller
 {
     public function __invoke()
     {
-        $my_orders = DoctorOrder::where('user_id', auth()->user()->id)->where('day', '>=', now())->get();
+        $my_orders = DoctorOrder::with(['time'])->where('user_id', auth()->user()->id)->where('day', '>=', now())->get();
         $doctor_orders = UserComment::where('user_id', auth()->user()->id)->get();
         return view('profile')->with(compact('doctor_orders'))->with(compact('my_orders'));
     }
