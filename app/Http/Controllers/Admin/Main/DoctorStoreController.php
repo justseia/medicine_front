@@ -13,7 +13,6 @@ class DoctorStoreController extends Controller
         $image = $request->file('image');
         $image_name = $image->hashName();
         $image->storeAs('public', $image_name);
-
         $image_name = route('home.index') . '/storage/' . $image_name;
 
         User::create([
